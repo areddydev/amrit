@@ -25,21 +25,21 @@
 
       <!-- Navbar Links -->
       <nav id="nav-menu" class="hidden md:flex space-x-4">
-        <a href="/research" class="hover:underline text-[#6A1051]">Research</a>
-        <a href="/news" class="hover:underline text-[#6A1051]">News</a>
-        <a href="/publications" class="hover:underline text-[#6A1051]">Publications</a>
-        <a href="/teaching" class="hover:underline text-[#6A1051]">Teaching</a>
-        <a href="/hobbies" class="hover:underline text-[#6A1051]">Hobbies</a>
+        <a href="/research.html" class="hover:underline text-[#6A1051]">Research</a>
+        <a href="/news.html" class="hover:underline text-[#6A1051]">News</a>
+        <a href="/publications.html" class="hover:underline text-[#6A1051]">Publications</a>
+        <a href="/teaching.html" class="hover:underline text-[#6A1051]">Teaching</a>
+        <a href="/hobbies.html" class="hover:underline text-[#6A1051]">Hobbies</a>
       </nav>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden  flex-col mt-4 md:hidden">
-      <a href="#research" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Research</a>
-      <a href="#news" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">News</a>
-      <a href="#publications" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Publications</a>
-      <a href="#teaching" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Teaching</a>
-      <a href="#hobbies" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Hobbies</a>
+      <a href="/research.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Research</a>
+      <a href="/news.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">News</a>
+      <a href="/publications.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Publications</a>
+      <a href="/teaching.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Teaching</a>
+      <a href="/hobbies.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Hobbies</a>
     </div>
 
   </header>
@@ -65,7 +65,7 @@
     <section id="research" class="fade-in">
         <h2 class="text-2xl font-bold mb-4">Research Interests</h2>
         <p class="mb-4">
-          My research work is dedicated to advancing the forefront of machine learning (ML) and artificial intelligence (AI), focusing on critical areas that shape the future of technology and society. As we navigate the complexities of AI, my research endeavors to harness its potential responsibly and innovatively. My core areas of interest are
+          My research work is dedicated to advancing the forefront of machine learning (ML) and artificial intelligence (AI), focusing on critical areas that shape the future of technology and society. As we navigate the complexities of AI, my research endeavors to harness its potential responsibly and innovatively. My core areas of interest are:
         </p>
         <ul class="list-disc list-inside text-lg space-y-2">
           <li>AI Alignment and Ethical Integration</li>
@@ -79,32 +79,24 @@
         <section id="news" class="fade-in">
           <h2 class="text-2xl font-bold mb-4">News</h2>
           <ul id="news-list" class="list-disc list-inside text-lg space-y-2">
-            <!-- News items will be dynamically inserted here -->
+            <li>Two papers accepted to NeurIPS 2024 in Vancouver, Canada!</li>
+            <li>Presented our recent AI alignment works Transfer Q* and MaxMin-RLHF at IBM Research, NY.</li>
+            <li>Presented our recent alignment work MaxMin-RLHF at Google Deepmind, NYC.</li>
+            <li>Three papers accepted to IROS 2024 in Abu Dhabi.</li>
+            <li>Presented our recent Transfer Q* work at Amazon in the Rising Star Speaker Series Seminar on June 27, 2024.</li>
+            <li>I will serve as an Area Chair for NeurIPS 2024.</li>
+            <li>Five papers accepted to ICML 2024 in Vienna, Austria!</li>
           </ul>
           <p class="mt-4">
             <a href="/news" class="text-blue-600 hover:underline">More News</a>
           </p>
       </section>
       
-      <script>
-          // Fetch news data and render it
-          fetch('/news.json')
-              .then(response => response.json())
-              .then(data => {
-                  const newsList = document.getElementById('news-list');
-                  // Loop through the top 2 news items
-                  data.slice(0, 2).forEach(item => {
-                      const listItem = document.createElement('li');
-                      listItem.innerHTML = `<strong>${item.title}</strong> (${item.date})<br>${item.description}`;
-                      newsList.appendChild(listItem);
-                  });
-              })
-              .catch(error => console.error('Error fetching news:', error));
-      </script>
+
 
     <!-- Publications Section -->
     <section id="publications" class="fade-in">
-        <h2 class="text-2xl font-bold mb-4">Publications</h2>
+        <h2 class="text-2xl font-bold mb-4"> Selected Publications</h2>
         <p>A comprehensive list of publications is coming soon!</p>
       </section>
 
@@ -126,74 +118,6 @@
     </div>
   </footer>
 
-  <script>
-    // Initialize Lenis for smooth scrolling
-    
-
-    // Mobile Menu Logic
-    const hamburger = document.getElementById("hamburger");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const menuItems = document.querySelectorAll(".menu-item");
-    let menuOpen = false;
-
-    // Toggle mobile menu
-    hamburger.addEventListener("click", () => {
-      menuOpen = !menuOpen;
-      mobileMenu.classList.toggle("hidden", !menuOpen);
-
-      // Animate hamburger icon
-      if (menuOpen) {
-        gsap.to(hamburger.children[0], { 
-          rotate: 45, 
-          y: 7.5, 
-          duration: 0.3 
-        });
-        gsap.to(hamburger.children[1], { 
-          opacity: 0, 
-          duration: 0.3 
-        });
-        gsap.to(hamburger.children[2], { 
-          rotate: -45, 
-          y: -7.5, 
-          duration: 0.3 
-        });
-        gsap.fromTo(
-          menuItems,
-          { opacity: 0, y: -20 },
-          { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" }
-        );
-      } else {
-        gsap.to(hamburger.children[0], { 
-          rotate: 0, 
-          y: 0, 
-          duration: 0.3 
-        });
-        gsap.to(hamburger.children[1], { 
-          opacity: 1, 
-          duration: 0.3 
-        });
-        gsap.to(hamburger.children[2], { 
-          rotate: 0, 
-          y: 0, 
-          duration: 0.3 
-        });
-      }
-    });
-
-    // Close menu on item click and smooth scroll
-    menuItems.forEach((item) => {
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        menuOpen = false;
-        mobileMenu.classList.add("hidden");
-
-        const targetId = item.getAttribute("href").slice(1);
-        const targetElement = document.getElementById(targetId);
-
-        // Scroll smoothly to the target element
-        lenis.scrollTo(targetElement);
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
