@@ -55,7 +55,7 @@ menuItems.forEach((item) => {
     menuOpen = false;
     mobileMenu.classList.add("hidden");
     
-    // Close the hamburger menu
+    // Close the hamburger menu∫
     hamburger.classList.remove("open");
 
     const targetId = item.getAttribute("href").slice(1);
