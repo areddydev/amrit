@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrit Singh Bedi Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@studio-freight/lenis"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-[#FFE7AD] text-white p-3 sticky top-0 z-50 shadow-lg">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-[#6A1051]">Amrit Singh Bedi</h1>
+      
+      <!-- Hamburger Icon -->
+      <div class="block md:hidden">
+        <button id="hamburger" class="focus:outline-none">
+          <div class="w-6 h-1 bg-[#6A1051] mb-1"></div>
+          <div class="w-6 h-1 bg-[#6A1051] mb-1"></div>
+          <div class="w-6 h-1 bg-[#6A1051]"></div>
+        </button>
+      </div>
+
+      <!-- Navbar Links -->
+      <nav id="nav-menu" class="hidden md:flex space-x-4">
+        <a href="#about" class="hover:underline text-[#6A1051]">About</a>
+        <a href="#research" class="hover:underline text-[#6A1051]">Research</a>
+        <a href="#news" class="hover:underline text-[#6A1051]">News</a>
+        <a href="#publications" class="hover:underline text-[#6A1051]">Publications</a>
+        <a href="#hobbies" class="hover:underline text-[#6A1051]">Hobbies</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden  flex-col mt-4 md:hidden">
+      <a href="#about" class="menu-item block py-2 text-center hover:bg-blue-700 text-[#6A1051]">About</a>
+      <a href="#research" class="menu-item block py-2 text-center hover:bg-blue-700 text-[#6A1051]">Research</a>
+      <a href="#news" class="menu-item block py-2 text-center hover:bg-blue-700 text-[#6A1051]">News</a>
+      <a href="#publications" class="menu-item block py-2 text-center hover:bg-blue-700 text-[#6A1051]">Publications</a>
+      <a href="#hobbies" class="menu-item block py-2 text-center hover:bg-blue-700 text-[#6A1051]">Hobbies</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <!-- About Section -->
+     <h1 class="text-2xl font-bold text-[#6A1051]">News </h1>
+
+        
+   
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white p-6 mt-12">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>&copy; 2024 Amrit Bedi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Initialize Lenis for smooth scrolling
+    
+    // Mobile Menu Logic
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuItems = document.querySelectorAll(".menu-item");
+    let menuOpen = false;
+
+    // Toggle mobile menu
+    hamburger.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle("hidden", !menuOpen);
+
+      if (menuOpen) {
+        gsap.fromTo(
+          menuItems,
+          { opacity: 0, y: -20 },
+          { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" }
+        );
+      }
+    });
+
+    // Close menu on item click and smooth scroll
+    menuItems.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        menuOpen = false;
+        mobileMenu.classList.add("hidden");
+
+        const targetId = item.getAttribute("href").slice(1);
+        const targetElement = document.getElementById(targetId);
+
+        // Scroll smoothly to the target element
+        lenis.scrollTo(targetElement);
+      });
+    });
+  </script>
+</body>
+</html>
