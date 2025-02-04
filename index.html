@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 </head>
+
 <body class="bg-[#F1F0E8] text-gray-800">
 
   <!-- Header -->
   <header class="bg-[#e0e8e8] text-white p-3 sticky top-0 z-50 shadow-lg">
     <div class="max-w-4xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold text-[#6A1051]">Amrit Singh Bedi</h1>
-      
+
       <!-- Hamburger Icon -->
       <div class="block md:hidden">
         <button id="hamburger" class="focus:outline-none">
@@ -24,7 +26,7 @@
       </div>
 
       <!-- Navbar Links -->
-      <<nav id="nav-menu" class="hidden md:flex space-x-4">
+      <nav id="nav-menu" class="hidden md:flex space-x-4">
         <a href="/amrit/research.html" class="hover:underline text-[#6A1051]">Research</a>
         <a href="/amrit/news.html" class="hover:underline text-[#6A1051]">News</a>
         <a href="/amrit/publications.html" class="hover:underline text-[#6A1051]">Publications</a>
@@ -35,80 +37,121 @@
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden  flex-col mt-4 md:hidden">
-      <a href="/amrit/research.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Research</a>
+      <a href="/amrit/research.html"
+        class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Research</a>
       <a href="/amrit/news.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">News</a>
-      <a href="/amrit/publications.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Publications</a>
-      <a href="/amrit/teaching.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Teaching</a>
-      <a href="/amrit/hobbies.html" class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Hobbies</a>
+      <a href="/amrit/publications.html"
+        class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Publications</a>
+      <a href="/amrit/teaching.html"
+        class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Teaching</a>
+      <a href="/amrit/hobbies.html"
+        class="menu-item block py-2 text-center hover:bg-[#6cd5a4] text-[#6A1051]">Hobbies</a>
     </div>
 
   </header>
 
   <!-- Main Content -->
   <main class="max-w-4xl mx-auto p-6 space-y-12">
+    <h1 class="text-5xl font-bold text-center">Amrit Singh Bedi</h1>
+
+    <div class="h-2 w-50 bg-gray-400"></div>
     <!-- About Section -->
     <section id="about" class="fade-in">
-        <div class="flex flex-col md:flex-row  items-center md:items-start space-x-6">
-          <img src="./profile.jpg" alt="Profile Image" class="profile-img w-50 h-60 border-radius rounded-lg ">
-          <div>
-            <h2 class="text-2xl font-bold mb-4">About Me</h2>
-            <p>
-              Thank you for visiting my webpage.
-              <br><br>
-             I am an Assistant Professor in the Computer Science department (joint appointment with the ECE department) at the University of Central Florida, USA. Before joining UCF, I  was an Assistant Research Professor/Scientist at the University of Maryland (UMD), College Park, MD, USA, working closely with Prof. Dinesh Manocha, Prof. Pratap Tokekar, and Prof. Furong Huang. Prior to my time at UMD, I was fortunate enough to work with Dr. Alec Koppel and Dr. Brian Sadler at the US Army Research Laboratory, where I gained valuable experience and insights into the real-world applications of my research.  I earned my Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) in Kanpur under the supervision of Prof. Ketan Rajawat, where I focused on distributed and online learning with stochastic gradient methods for my Ph.D. thesis.
-            </p>
+      <div class="flex flex-col md:flex-row items-center md:items-start space-x-6">
+        <img src="./profile.jpg" alt="Profile Image" class="profile-img w-60 h-70 rounded-lg shadow-lg">
+        <div class="space-y-4">
+          <h2 class="text-2xl font-bold">Affiliation:</h2>
+          <p class="text-lg font-normal">Assistant Professor at UCF, Florida</p>
+
+          <h2 class="text-2xl font-bold">Email:</h2>
+          <p class="text-lg font-normal">amritbedi [at] ucf [dot] edu</p>
+          <h2 class="text-2xl font-bold">My Links:</h2>
+          <div class="flex space-x-4">
+            <a href="https://scholar.google.com/citations?user=91WLA6QAAAAJ&hl=en"
+              class="flex items-center hover:text-blue-600 transition">
+              <img src="logos/gs.png" alt="Google Scholar" class="h-8 w-8 mr-2">
+              <span class="text-lg font-normal">Google Scholar</span>
+            </a>
+            <a href="https://drive.google.com/file/d/1QfV2cM7QjrNTWRw2YLXBCLFymoiq_95p/view?usp=sharing"
+              class="flex items-center hover:text-blue-600 transition">
+              <img src="logos/cv.png" alt="CV" class="h-8 w-8 mr-2">
+              <span class="text-lg font-normal">CV</span>
+            </a>
+            <a href="https://www.linkedin.com/in/amrit-bedi-3284089a/"
+              class="flex items-center hover:text-blue-600 transition">
+              <img src="logos/linkedin.png" alt="LinkedIn" class="h-8 w-8 mr-2">
+              <span class="text-lg font-normal">LinkedIn</span>
+            </a>
+            <a href="https://twitter.com/amritsinghbedi3" class="flex items-center hover:text-blue-600 transition">
+              <img src="logos/x_logo.webp" alt="Twitter" class="h-8 w-8 mr-2">
+              <span class="text-lg font-normal">Twitter</span>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     <!--Research Section -->
     <section id="research" class="fade-in">
-        <h2 class="text-2xl font-bold mb-4">Research Interests</h2>
-        <p class="mb-4">
-          My research work is dedicated to advancing the forefront of machine learning (ML) and artificial intelligence (AI), focusing on critical areas that shape the future of technology and society. As we navigate the complexities of AI, my research endeavors to harness its potential responsibly and innovatively. My core areas of interest are:
+      <div>
+        Thank you for visiting my webpage.
+        <h2 class="text-2xl font-bold my-2∫">About Me </h2>
+        <p>
+          I am an Assistant Professor in the Computer Science
+          department (joint appointment with the ECE department) at the University of Central Florida, USA. Before
+          joining UCF, I was an Assistant Research Professor/Scientist at the University of Maryland (UMD), College
+          Park, MD, USA, working closely with Prof. Dinesh Manocha, Prof. Pratap Tokekar, and Prof. Furong Huang. Prior
+          to my time at UMD, I was fortunate enough to work with Dr. Alec Koppel and Dr. Brian Sadler at the US Army
+          Research Laboratory, where I gained valuable experience and insights into the real-world applications of my
+          research. I earned my Ph.D. in Electrical Engineering from the Indian Institute of Technology (IIT) in Kanpur
+          under the supervision of Prof. Ketan Rajawat, where I focused on distributed and online learning with
+          stochastic gradient methods for my Ph.D. thesis.
         </p>
+
+        <h2 class="text-2xl my-2 font-bold">Research Interests</h2>
+        <p class="mb-4">
+          My research work is dedicated to advancing the forefront of machine learning (ML) and artificial intelligence
+          (AI), focusing on critical areas that shape the future of technology and society. As we navigate the
+          complexities of AI, my research endeavors to harness its potential responsibly and innovatively. My core areas
+          of interest are:
         <ul class="list-disc list-inside text-lg space-y-2">
           <li>AI Alignment and Ethical Integration</li>
           <li>Reinforcement Learning from Human Feedback</li>
           <li>Safety/Trustworthiness in Generative AI</li>
+          <li> Optimization Techniques for the AI Era</li>
+          <li>Data Efficiency in Machine Learning</li>
         </ul>
-      </section>
+        </p>
+      </div>
+    </section>
 
     <!-- News Section -->
-        <!-- News Section -->
-        <section id="news" class="fade-in">
-          <h2 class="text-2xl font-bold mb-4">News</h2>
-          <ul id="news-list" class="list-disc list-inside text-lg space-y-2">
-            <li>Two papers accepted to NeurIPS 2024 in Vancouver, Canada!</li>
-            <li>Presented our recent AI alignment works Transfer Q* and MaxMin-RLHF at IBM Research, NY.</li>
-            <li>Presented our recent alignment work MaxMin-RLHF at Google Deepmind, NYC.</li>
-            <li>Three papers accepted to IROS 2024 in Abu Dhabi.</li>
-            <li>Presented our recent Transfer Q* work at Amazon in the Rising Star Speaker Series Seminar on June 27, 2024.</li>
-            <li>I will serve as an Area Chair for NeurIPS 2024.</li>
-            <li>Five papers accepted to ICML 2024 in Vienna, Austria!</li>
-          </ul>
-          <p class="mt-4">
-            <a href="/news" class="text-blue-600 hover:underline">More News</a>
-          </p>
-      </section>
-      
+    <!-- News Section -->
+    <section id="news" class="fade-in">
+      <h2 class="text-2xl font-bold mb-4">News</h2>
+      <ul id="news-list" class="list-disc list-inside text-lg space-y-2">
+        <li>Two papers accepted to NeurIPS 2024 in Vancouver, Canada!</li>
+        <li>Presented our recent AI alignment works Transfer Q* and MaxMin-RLHF at IBM Research, NY.</li>
+        <li>Presented our recent alignment work MaxMin-RLHF at Google Deepmind, NYC.</li>
+        <li>Three papers accepted to IROS 2024 in Abu Dhabi.</li>
+        <li>Presented our recent Transfer Q* work at Amazon in the Rising Star Speaker Series Seminar on June 27, 2024.
+        </li>
+        <li>I will serve as an Area Chair for NeurIPS 2024.</li>
+        <li>Five papers accepted to ICML 2024 in Vienna, Austria!</li>
+      </ul>
+      <p class="mt-4">
+        <a href="/amrit/news.html" class="text-blue-600 hover:underline">More News</a>
+      </p>
+    </section>
+
 
 
     <!-- Publications Section -->
     <section id="publications" class="fade-in">
-        <h2 class="text-2xl font-bold mb-4"> Selected Publications</h2>
-        <p>A comprehensive list of publications is coming soon!</p>
-      </section>
+      <h2 class="text-2xl font-bold mb-4"> Selected Publications</h2>
+      <p>A comprehensive list of publications is coming soon!</p>
+    </section>
 
-    <!-- Hobbies Section -->
-    <section id="hobbies" class="fade-in">
-        <h2 class="text-2xl font-bold mb-4">Hobbies</h2>
-        <ul class="list-disc list-inside text-lg space-y-2">
-          <li>Reading science fiction novels</li>
-          <li>Playing chess</li>
-          <li>Exploring nature trails</li>
-        </ul>
-      </section> 
   </main>
 
   <!-- Footer -->
@@ -120,4 +163,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>
